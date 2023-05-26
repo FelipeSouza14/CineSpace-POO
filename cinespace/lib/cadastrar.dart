@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Cinespace'),
+      home: const MyHomePage(title: 'Cadastrar nova conta'),
     );
   }
 }
