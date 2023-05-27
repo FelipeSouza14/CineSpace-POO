@@ -20,6 +20,11 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Container(
+                  width: 700,
+                  height: 300,
+                  child: Image.asset('assets/imgs/cinespace.png'),
+                ),
                 TextField(
                   onChanged: (text) {
                     email = text;

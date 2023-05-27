@@ -12,6 +12,8 @@ class HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text('CineSpace'),
         ),
-        body: Center());
+        body: Center(
+          child: Text('Tela inicial do cine'),
+        ));
   }
 }
