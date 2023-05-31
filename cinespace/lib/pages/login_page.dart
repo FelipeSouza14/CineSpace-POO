@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {
-                    if (email == 'thami@gmail.com' && senha == '123') {
+                    if (email == '' && senha == '') {
                       Navigator.of(context).pushNamed('/home');
                     } else {
                       print("login invalido");
