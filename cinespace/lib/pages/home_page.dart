@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tmdb_api/tmdb_api.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:transparent_image/transparent_image.dart';
+import 'package:cinespace/classesmovie/popular.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -43,8 +45,12 @@ class HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text('CineSpace'),
         ),
-        body: Center(
-          child: Text('Tela inicial do cine'),
-        ));
+        body: ListView(
+          children: [
+            PopularMovie(popular: popularmovies)
+          ],
+        )
+        
+    );
   }
 }
