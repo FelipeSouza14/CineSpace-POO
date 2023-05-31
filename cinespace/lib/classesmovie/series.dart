@@ -38,8 +38,8 @@ class BestSeries extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         )),
                         Container(
-                          child: Text(tvbest[index]['title'] != null
-                              ? tvbest[index]['title']
+                          child: Text(tvbest[index]['original_name'] != null
+                              ? tvbest[index]['original_name']
                               : 'carregando...'),
                         )
                       ],
