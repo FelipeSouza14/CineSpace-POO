@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-class BestSeries extends StatelessWidget {
-  final List tvbest;
+class CinemaMovie extends StatelessWidget {
+  final List cinema;
 
-  const BestSeries({Key? key, required this.tvbest}) : super(key: key);
+  const CinemaMovie({Key? key, required this.cinema}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +14,12 @@ class BestSeries extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Melhores séries para assistir',
+          Text('Filmes atualmente nos cinemas',
               style: GoogleFonts.breeSerif(fontSize: 25)),
           Container(
             height: 270,
             child: ListView.builder(
-              itemCount: tvbest.length,
+              itemCount: cinema.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return InkWell(
@@ -34,12 +34,12 @@ class BestSeries extends StatelessWidget {
                           child: FadeInImage.memoryNetwork(
                               placeholder: kTransparentImage,
                               image: 'https://image.tmdb.org/t/p/w500' +
-                                  tvbest[index]['poster_path']),
+                                  cinema[index]['poster_path']),
                           borderRadius: BorderRadius.circular(10),
                         )),
                         Container(
-                          child: Text(tvbest[index]['original_name'] != null
-                              ? tvbest[index]['original_name']
+                          child: Text(cinema[index]['title'] != null
+                              ? cinema[index]['title']
                               : 'carregando...'),
                         )
                       ],
