@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'pages/home_page.dart';
 import 'pages/login_page.dart';
+import 'pages/cadastro_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => LoginPage(),
         '/home': (context) => HomePage(),
+        '/cadastro': (context) => CadastroPage(),
       },
     );
   }
