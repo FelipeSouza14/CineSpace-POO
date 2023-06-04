@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
+class CadastroPage extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _CadastroPageState createState() => _CadastroPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _CadastroPageState extends State<CadastroPage> {
   String email = '';
   String senha = '';
   @override
@@ -20,17 +20,32 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 700,
-                  height: 300,
-                  child: Image.asset('assets/imgs/cinespace.png'),
-                ),
                 TextField(
                   onChanged: (text) {
                     email = text;
                   },
                   decoration: InputDecoration(
+                    labelText: 'Nome',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                SizedBox(height: 10),
+                TextField(
+                  onChanged: (text) {
+                    senha = text;
+                  },
+                  decoration: InputDecoration(
                     labelText: 'Email',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                SizedBox(height: 10),
+                TextField(
+                  onChanged: (text) {
+                    email = text;
+                  },
+                  decoration: InputDecoration(
+                    labelText: 'Telefone',
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -48,20 +63,16 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {
-                    if (email == '' && senha == '') {
-                      Navigator.of(context).pushNamed('/home');
-                    } else {
-                      print("login invalido");
-                    }
+                    print("salvado");
                   },
-                  child: Text('Entrar'),
+                  child: Text('Salvar'),
                 ),
                 SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/cadastro');
+                    Navigator.of(context).pushReplacementNamed('/');
                   },
-                  child: Text('Cadastra-se'),
+                  child: Text('Voltar'),
                 )
               ],
             ),

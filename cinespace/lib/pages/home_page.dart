@@ -20,19 +20,15 @@ class HomePageState extends State<HomePage> {
   final acesstoken =
       'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZDlhM2IyOTU2ZDYwYmZlYmMxYThhNjQyMGMyMGJiMCIsInN1YiI6IjY0NzVlNWQ3MWJmMjY2MDQ0MDI2ZmRmZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.589H_oZUbS9UC0Rh7Uff60CrbeDBQCwEhPzcqfPeivM';
 
-    @override
-    void initState(){
-      carregarmovies();
-      super.initState();
-    }
+  @override
+  void initState() {
+    carregarmovies();
+    super.initState();
+  }
 
   void carregarmovies() async {
     TMDB carregartmdb = TMDB(ApiKeys(apikey, acesstoken),
-      logConfig: ConfigLogger(
-      showLogs: true, 
-      showErrorLogs: true
-      )
-    );
+        logConfig: ConfigLogger(showLogs: true, showErrorLogs: true));
     Map popular_results = await carregartmdb.v3.trending.getTrending();
     Map bestseries_results = await carregartmdb.v3.tv.getTopRated();
 
@@ -55,8 +51,6 @@ class HomePageState extends State<HomePage> {
             BestSeries(tvbest: bestseries),
             PopularMovie(popular: popularmovies)
           ],
-        )
-        
-    );
+        ));
   }
 }
