@@ -1,3 +1,4 @@
+import 'package:cinespace/pages/pesquisa_page.dart';
 import 'package:flutter/material.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -50,6 +51,16 @@ class HomePageState extends State<HomePage> {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           title: Text('CineSpace'),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  showSearch(
+                    context: context,
+                    delegate: PesquisaPage(),
+                  );
+                },
+                icon: Icon(Icons.search_rounded))
+          ],
         ),
         body: ListView(
           children: [
