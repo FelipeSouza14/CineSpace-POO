@@ -26,7 +26,7 @@ class BestSeries extends StatelessWidget {
                   onDoubleTap: () {},
                   child: Container(
                     padding: EdgeInsets.all(5),
-                    width: 140,
+                    width: 130,
                     child: Column(
                       children: [
                         Container(

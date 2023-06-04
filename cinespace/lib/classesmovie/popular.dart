@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-
 class PopularMovie extends StatelessWidget {
   final List popular;
 
@@ -17,7 +16,6 @@ class PopularMovie extends StatelessWidget {
         children: [
           Text('Filmes mais populares',
               style: GoogleFonts.breeSerif(fontSize: 25)),
-          
           Container(
             height: 270,
             child: ListView.builder(
@@ -25,33 +23,29 @@ class PopularMovie extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return InkWell(
-                  onDoubleTap: () {
-
-
-                  },
-
+                  onDoubleTap: () {},
                   child: Container(
                     padding: EdgeInsets.all(5),
-                    width: 140,
+                    width: 130,
                     child: Column(
                       children: [
                         Container(
-                                child: ClipRRect(
-                                child: FadeInImage.memoryNetwork(
-                                  placeholder: kTransparentImage, 
-                                  image: 'https://image.tmdb.org/t/p/w500'+popular[index]['poster_path']),
-                                  borderRadius: BorderRadius.circular(10),
-                                  )
-                                
-                              
-                        ),
+                            child: ClipRRect(
+                          child: FadeInImage.memoryNetwork(
+                              placeholder: kTransparentImage,
+                              image: 'https://image.tmdb.org/t/p/w500' +
+                                  popular[index]['poster_path']),
+                          borderRadius: BorderRadius.circular(10),
+                        )),
                         Container(
-                          child: Text(popular[index]['title']!= null? popular[index]['title']:'carregando...'),
+                          child: Text(popular[index]['title'] != null
+                              ? popular[index]['title']
+                              : 'carregando...'),
                         )
                       ],
                     ),
                   ),
-                ) ;
+                );
               },
             ),
           )
