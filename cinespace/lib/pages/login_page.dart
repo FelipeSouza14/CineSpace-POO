@@ -55,6 +55,13 @@ class _LoginPageState extends State<LoginPage> {
                     }
                   },
                   child: Text('Entrar'),
+                ),
+                SizedBox(height: 10),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/cadastro');
+                  },
+                  child: Text('Cadastra-se'),
                 )
               ],
             ),
