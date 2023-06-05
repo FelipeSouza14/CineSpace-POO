@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 
 class DescriptionMovie extends StatelessWidget {
-  final String name, descricao, votos, genero, bannerurl, date;
+  final String name, descricao, votos, bannerurl, date;
 
   const DescriptionMovie({Key? key, required this.name, required this.descricao, 
-  required this.votos, required this.genero, required this.bannerurl, required this.date});
+  required this.votos, required this.bannerurl, required this.date});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black26,
+      backgroundColor: Colors.black,
       body: ListView(
         children: [
           Container(
@@ -20,20 +21,38 @@ class DescriptionMovie extends StatelessWidget {
               children: [
                 Positioned(
                   child: Container(
-                    height: 250,
-                    width: MediaQuery.of(context).size.width,
+                    height: 550,
+                    width: 480,
                     child: FadeInImage.memoryNetwork(
                       placeholder: kTransparentImage, 
-                      image: bannerurl
+                      image: bannerurl,
                       ),
-                  )
+                )
+              ),
+                Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Colors.transparent, Colors.black.withOpacity(0.5)],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter
+                      )
+                  ),
                 ),
                 Positioned(
-                  child: Text('Quantidade votada - '+votos))
+                  bottom: 10,
+                  child: Text('Favorites - '+votos, style: GoogleFonts.breeSerif(fontSize: 25, fontWeight: FontWeight.bold),))
               ],
-
             ),
-
+          ),
+          SizedBox(height: 10),
+          Container(
+            padding: EdgeInsets.all(5),
+            child: Text(name!=null?name: 'carregando...', style: GoogleFonts.breeSerif(fontSize: 30)),
+          ),
+          Container(
+            padding: EdgeInsets.all(5),
+            child: Text(date!=null?date: 'carregando...', style: GoogleFonts.breeSerif(fontSize: 18)),
           )
 
 

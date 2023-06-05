@@ -24,15 +24,14 @@ class PopularMovie extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return InkWell(
-                  onDoubleTap: () {
+                  onTap: () {
                     Navigator.push(context,
                       MaterialPageRoute(
                         builder: (context) => DescriptionMovie(
                           name: popular[index]['title'],
                           bannerurl: 'https://image.tmdb.org/t/p/w500'+popular[index]['backdrop_path'],
-                          genero: popular[index]['genre_ids'],
                           descricao: popular[index]['overview'],
-                          votos: popular[index]['vote_avarage'],
+                          votos: popular[index]['vote_average'].toString(),
                           date: popular[index]['release_date'],
                         )));
                   },
