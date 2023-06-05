@@ -12,6 +12,15 @@ class DescriptionMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 30,
+        backgroundColor: Colors.black,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back)),
+      ),
       backgroundColor: Colors.black,
       body: ListView(
         children: [
@@ -21,7 +30,7 @@ class DescriptionMovie extends StatelessWidget {
               children: [
                 Positioned(
                   child: Container(
-                    height: 550,
+                    height: 600,
                     width: 480,
                     child: FadeInImage.memoryNetwork(
                       placeholder: kTransparentImage, 
@@ -33,12 +42,23 @@ class DescriptionMovie extends StatelessWidget {
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Colors.transparent, Colors.black.withOpacity(0.5)],
+                      colors: [Colors.transparent, Colors.black.withOpacity(0.8)],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter
                       )
                     ),
                   ),
+                // Positioned(
+                //   left: -2,
+                //   child: ElevatedButton(
+                //       onPressed: () {
+                //         Navigator.pop(context);
+                //       },
+                //       style: ElevatedButton.styleFrom(backgroundColor: Colors.transparent),
+                //       child: Icon(Icons.arrow_back),
+
+                //     )
+                //   ),
                 Positioned(
                   bottom: 10,
                   child: Text('Favorites - '+votos, style: GoogleFonts.breeSerif(fontSize: 25, fontWeight: FontWeight.bold),)
