@@ -27,8 +27,8 @@ class DescriptionMovie extends StatelessWidget {
                       placeholder: kTransparentImage, 
                       image: bannerurl,
                       ),
-                )
-              ),
+                    )
+                  ),
                 Container(
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
@@ -37,14 +37,15 @@ class DescriptionMovie extends StatelessWidget {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter
                       )
+                    ),
                   ),
-                ),
                 Positioned(
                   bottom: 10,
-                  child: Text('Favorites - '+votos, style: GoogleFonts.breeSerif(fontSize: 25, fontWeight: FontWeight.bold),))
-              ],
+                  child: Text('Favorites - '+votos, style: GoogleFonts.breeSerif(fontSize: 25, fontWeight: FontWeight.bold),)
+                  )
+                ],
+              ),
             ),
-          ),
           SizedBox(height: 10),
           Container(
             padding: EdgeInsets.all(5),
@@ -54,16 +55,8 @@ class DescriptionMovie extends StatelessWidget {
             padding: EdgeInsets.all(5),
             child: Text(date!=null?date: 'carregando...', style: GoogleFonts.breeSerif(fontSize: 18)),
           )
-
-
-
         ],
       ),
-
-
-
-
-
     );
   }
 }

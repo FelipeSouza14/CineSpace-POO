@@ -68,7 +68,8 @@ class HomePageState extends State<HomePage> {
             BestSeries(tvbest: bestseries),
             PopularMovie(popular: popularmovies),
             CinemaMovie(cinema: cinemamovies)
-          ],
-        ));
+        ],
+      )
+    );
   }
 }

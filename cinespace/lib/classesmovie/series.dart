@@ -33,7 +33,9 @@ class BestSeries extends StatelessWidget {
                           descricao: tvbest[index]['overview'],
                           votos: tvbest[index]['vote_average'].toString(),
                           date: tvbest[index]['first_air_date'],
-                        )));
+                        )
+                      )
+                    );
                   },
                   child: Container(
                     padding: EdgeInsets.all(5),

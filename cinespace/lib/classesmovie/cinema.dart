@@ -24,7 +24,19 @@ class CinemaMovie extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return InkWell(
-                  onDoubleTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                      MaterialPageRoute(
+                        builder: (context) => DescriptionMovie(
+                          name: cinema[index]['title'],
+                          bannerurl: 'https://image.tmdb.org/t/p/w500'+cinema[index]['backdrop_path'],
+                          descricao: cinema[index]['overview'],
+                          votos: cinema[index]['vote_average'].toString(),
+                          date: cinema[index]['release_date'],
+                        )
+                      )
+                    );
+                  },
                   child: Container(
                     padding: EdgeInsets.all(5),
                     width: 130,
@@ -40,8 +52,7 @@ class CinemaMovie extends StatelessWidget {
                         )),
                         Container(
                           child: Text(cinema[index]['title'] != null
-                              ? cinema[index]['title']
-                              : 'carregando...'),
+                              ? cinema[index]['title']: 'carregando...'),
                         )
                       ],
                     ),

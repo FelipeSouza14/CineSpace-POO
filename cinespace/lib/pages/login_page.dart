@@ -49,32 +49,33 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: 10),
 
                 Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                ElevatedButton(
-                  onPressed: () {
-                    if (email == '' && senha == '') {
-                      Navigator.of(context).pushNamed('/home');
-                    } else {
-                      print("login invalido");
-                    }
-                  },
-                  child: Text('Entrar', style: TextStyle(fontSize: 20)),
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: Size(100, 40)
-                  ),
-                ),
-                SizedBox(height: 10),
-                SizedBox(width: 10),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed('/cadastro');
-                  },
-                  child: Text('Cadastro', style: TextStyle(fontSize: 20)),
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: Size(100, 40)
-                  ),
-                )]
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        if (email == '' && senha == '') {
+                          Navigator.of(context).pushNamed('/home');
+                        } else {
+                          print("login invalido");
+                        }
+                      },
+                      child: Text('Entrar', style: TextStyle(fontSize: 20)),
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(100, 40)
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    SizedBox(width: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/cadastro');
+                      },
+                      child: Text('Cadastro', style: TextStyle(fontSize: 20)),
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(100, 40)
+                      ),
+                    )
+                  ]
                 )
               ],
             )),

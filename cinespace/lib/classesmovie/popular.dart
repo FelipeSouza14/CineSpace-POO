@@ -33,7 +33,9 @@ class PopularMovie extends StatelessWidget {
                           descricao: popular[index]['overview'],
                           votos: popular[index]['vote_average'].toString(),
                           date: popular[index]['release_date'],
-                        )));
+                        )
+                      )
+                    );
                   },
                   child: Container(
                     padding: EdgeInsets.all(5),
