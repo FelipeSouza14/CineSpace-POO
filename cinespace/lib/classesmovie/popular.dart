@@ -11,7 +11,7 @@ class PopularMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -35,6 +35,7 @@ class PopularMovie extends StatelessWidget {
                           date: popular[index]['release_date'],
                         )));
                   },
+
                   child: Container(
                     padding: EdgeInsets.all(5),
                     width: 130,
