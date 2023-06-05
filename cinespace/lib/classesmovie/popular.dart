@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:transparent_image/transparent_image.dart';
+import 'package:cinespace/pages/descricao.dart';
 
 class PopularMovie extends StatelessWidget {
   final List popular;
@@ -10,7 +11,7 @@ class PopularMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -23,7 +24,19 @@ class PopularMovie extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return InkWell(
-                  onDoubleTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                      MaterialPageRoute(
+                        builder: (context) => DescriptionMovie(
+                          name: popular[index]['title'],
+                          bannerurl: 'https://image.tmdb.org/t/p/w500'+popular[index]['backdrop_path'],
+                          descricao: popular[index]['overview'],
+                          votos: popular[index]['vote_average'].toString(),
+                          date: popular[index]['release_date'],
+                        )
+                      )
+                    );
+                  },
                   child: Container(
                     padding: EdgeInsets.all(5),
                     width: 130,

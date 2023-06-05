@@ -48,9 +48,10 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text('CineSpace'),
+          title: Text('CineSpace', style: GoogleFonts.breeSerif()),
           actions: [
             IconButton(
                 onPressed: () {
@@ -67,7 +68,8 @@ class HomePageState extends State<HomePage> {
             BestSeries(tvbest: bestseries),
             PopularMovie(popular: popularmovies),
             CinemaMovie(cinema: cinemamovies)
-          ],
-        ));
+        ],
+      )
+    );
   }
 }

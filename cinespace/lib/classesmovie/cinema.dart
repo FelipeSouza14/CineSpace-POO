@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:transparent_image/transparent_image.dart';
+import 'package:cinespace/pages/descricao.dart';
 
 class CinemaMovie extends StatelessWidget {
   final List cinema;
@@ -10,7 +11,7 @@ class CinemaMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -23,7 +24,19 @@ class CinemaMovie extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return InkWell(
-                  onDoubleTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                      MaterialPageRoute(
+                        builder: (context) => DescriptionMovie(
+                          name: cinema[index]['title'],
+                          bannerurl: 'https://image.tmdb.org/t/p/w500'+cinema[index]['backdrop_path'],
+                          descricao: cinema[index]['overview'],
+                          votos: cinema[index]['vote_average'].toString(),
+                          date: cinema[index]['release_date'],
+                        )
+                      )
+                    );
+                  },
                   child: Container(
                     padding: EdgeInsets.all(5),
                     width: 130,
@@ -39,8 +52,7 @@ class CinemaMovie extends StatelessWidget {
                         )),
                         Container(
                           child: Text(cinema[index]['title'] != null
-                              ? cinema[index]['title']
-                              : 'carregando...'),
+                              ? cinema[index]['title']: 'carregando...'),
                         )
                       ],
                     ),
