@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   decoration: InputDecoration(
                     labelText: 'Email',
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -43,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Senha',
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -61,7 +61,8 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: Text('Entrar', style: TextStyle(fontSize: 20)),
                       style: ElevatedButton.styleFrom(
-                        minimumSize: Size(100, 40)
+                        minimumSize: Size(100, 40),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
                       ),
                     ),
                     SizedBox(height: 10),
@@ -72,7 +73,8 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: Text('Cadastro', style: TextStyle(fontSize: 20)),
                       style: ElevatedButton.styleFrom(
-                        minimumSize: Size(100, 40)
+                        minimumSize: Size(100, 40),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
                       ),
                     )
                   ]
