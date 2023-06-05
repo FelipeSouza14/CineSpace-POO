@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   decoration: InputDecoration(
                     labelText: 'Email',
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -43,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Senha',
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -54,25 +54,27 @@ class _LoginPageState extends State<LoginPage> {
                     ElevatedButton(
                       onPressed: () {
                         if (email == '' && senha == '') {
-                          Navigator.of(context).pushNamed('/home');
+                          Navigator.of(context).pushReplacementNamed('/home');
                         } else {
                           print("login invalido");
                         }
                       },
                       child: Text('Entrar', style: TextStyle(fontSize: 20)),
                       style: ElevatedButton.styleFrom(
-                        minimumSize: Size(100, 40)
+                        minimumSize: Size(100, 40),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
                       ),
                     ),
                     SizedBox(height: 10),
                     SizedBox(width: 10),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed('/cadastro');
+                        Navigator.of(context).pushReplacementNamed('/cadastro');
                       },
                       child: Text('Cadastro', style: TextStyle(fontSize: 20)),
                       style: ElevatedButton.styleFrom(
-                        minimumSize: Size(100, 40)
+                        minimumSize: Size(100, 40),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
                       ),
                     )
                   ]

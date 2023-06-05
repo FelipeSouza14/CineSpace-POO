@@ -29,7 +29,7 @@ class _CadastroPageState extends State<CadastroPage> {
                   },
                   decoration: InputDecoration(
                     labelText: 'Nome',
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -39,7 +39,7 @@ class _CadastroPageState extends State<CadastroPage> {
                   },
                   decoration: InputDecoration(
                     labelText: 'Email',
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -49,7 +49,7 @@ class _CadastroPageState extends State<CadastroPage> {
                   },
                   decoration: InputDecoration(
                     labelText: 'Telefone',
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -60,7 +60,7 @@ class _CadastroPageState extends State<CadastroPage> {
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Senha',
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -72,13 +72,15 @@ class _CadastroPageState extends State<CadastroPage> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             backgroundColor: Colors.blue,
-                            content: Text('Cadastro sendo processado', style: TextStyle(fontSize: 20, color: Colors.white),),
+                            content: Text('Cadastro sendo processado...', style: TextStyle(fontSize: 20, color: Colors.white),),
                             duration: Duration(seconds: 3),
                           ));
                       },
                       child: Text('Salvar', style: TextStyle(fontSize: 20)),
                       style: ElevatedButton.styleFrom(
-                        minimumSize: Size(100, 40))
+                        minimumSize: Size(100, 40),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
+                        )
                     ),
                     SizedBox(height: 10),
                     SizedBox(width: 10,),
@@ -88,7 +90,9 @@ class _CadastroPageState extends State<CadastroPage> {
                       },
                       child: Text('Voltar', style: TextStyle(fontSize: 20)),
                       style: ElevatedButton.styleFrom(
-                        minimumSize: Size(100, 40))
+                        minimumSize: Size(100, 40),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
+                      )
                     )
                   ])
                 ],

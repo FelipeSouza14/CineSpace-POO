@@ -42,7 +42,6 @@ class HomePageState extends State<HomePage> {
       bestseries = bestseries_results['results'];
       cinemamovies = cinema_results['results'];
     });
-    print(carregartmdb);
   }
 
   @override
@@ -60,9 +59,24 @@ class HomePageState extends State<HomePage> {
                     delegate: PesquisaPage(),
                   );
                 },
-                icon: Icon(Icons.search_rounded))
-          ],
-        ),
+                icon: Icon(Icons.search_rounded)),
+
+            PopupMenuButton<String>(
+              onSelected: (value) {
+                if (value == 'voltar'){
+                  Navigator.of(context).pushReplacementNamed('/');
+
+                }
+              },
+              itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+                PopupMenuItem<String>(
+                  value: 'voltar',
+                  child: Text('Logout')
+                  )
+                ]
+              )
+            ],
+          ),
         body: ListView(
           children: [
             BestSeries(tvbest: bestseries),
