@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                     ElevatedButton(
                       onPressed: () {
                         if (email == '' && senha == '') {
-                          Navigator.of(context).pushNamed('/home');
+                          Navigator.of(context).pushReplacementNamed('/home');
                         } else {
                           print("login invalido");
                         }
@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(width: 10),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed('/cadastro');
+                        Navigator.of(context).pushReplacementNamed('/cadastro');
                       },
                       child: Text('Cadastro', style: TextStyle(fontSize: 20)),
                       style: ElevatedButton.styleFrom(
