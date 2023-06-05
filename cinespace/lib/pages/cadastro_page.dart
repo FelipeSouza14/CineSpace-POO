@@ -69,7 +69,12 @@ class _CadastroPageState extends State<CadastroPage> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        print("salvado");
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            backgroundColor: Colors.blue,
+                            content: Text('Cadastro sendo processado', style: TextStyle(fontSize: 20, color: Colors.white),),
+                            duration: Duration(seconds: 3),
+                          ));
                       },
                       child: Text('Salvar', style: TextStyle(fontSize: 20)),
                       style: ElevatedButton.styleFrom(
