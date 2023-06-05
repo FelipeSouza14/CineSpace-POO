@@ -35,7 +35,6 @@ class PopularMovie extends StatelessWidget {
                           date: popular[index]['release_date'],
                         )));
                   },
-
                   child: Container(
                     padding: EdgeInsets.all(5),
                     width: 130,

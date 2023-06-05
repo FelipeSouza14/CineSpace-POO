@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:transparent_image/transparent_image.dart';
+import 'package:cinespace/pages/descricao.dart';
 
 class CinemaMovie extends StatelessWidget {
   final List cinema;
