@@ -17,8 +17,10 @@ class _CadastroPageState extends State<CadastroPage> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Padding(
-            padding: const EdgeInsets.all(100.0),
-            child: Column(
+            padding: const EdgeInsets.all(50),
+            child: Container(
+              width: 1000,
+              child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextField(
@@ -62,20 +64,30 @@ class _CadastroPageState extends State<CadastroPage> {
                   ),
                 ),
                 SizedBox(height: 10),
-                ElevatedButton(
-                  onPressed: () {
-                    print("salvado");
-                  },
-                  child: Text('Salvar'),
-                ),
-                SizedBox(height: 10),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).pushReplacementNamed('/');
-                  },
-                  child: Text('Voltar'),
-                )
-              ],
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        print("salvado");
+                      },
+                      child: Text('Salvar', style: TextStyle(fontSize: 20)),
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(100, 40))
+                    ),
+                    SizedBox(height: 10),
+                    SizedBox(width: 10,),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushReplacementNamed('/');
+                      },
+                      child: Text('Voltar', style: TextStyle(fontSize: 20)),
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(100, 40))
+                    )
+                  ])
+                ],
+              )
             ),
           ),
         ),
