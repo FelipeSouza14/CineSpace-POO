@@ -33,6 +33,7 @@ class PopularMovie extends StatelessWidget {
                           descricao: popular[index]['overview'],
                           votos: popular[index]['vote_average'].toString(),
                           date: popular[index]['release_date'],
+                          poster: 'https://image.tmdb.org/t/p/w500'+popular[index]['poster_path'],
                         )
                       )
                     );
@@ -43,12 +44,11 @@ class PopularMovie extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
-                            child: ClipRRect(
-                          child: FadeInImage.memoryNetwork(
-                              placeholder: kTransparentImage,
-                              image: 'https://image.tmdb.org/t/p/w500' +
-                                  popular[index]['poster_path']),
-                          borderRadius: BorderRadius.circular(10),
+                          child: ClipRRect(
+                            child: FadeInImage.memoryNetwork(
+                                placeholder: kTransparentImage,
+                                image: 'https://image.tmdb.org/t/p/w500'+popular[index]['poster_path']),
+                            borderRadius: BorderRadius.circular(10),
                         )),
                         Container(
                           child: Text(popular[index]['title'] != null

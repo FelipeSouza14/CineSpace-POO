@@ -33,6 +33,7 @@ class CinemaMovie extends StatelessWidget {
                           descricao: cinema[index]['overview'],
                           votos: cinema[index]['vote_average'].toString(),
                           date: cinema[index]['release_date'],
+                          poster: 'https://image.tmdb.org/t/p/w500'+cinema[index]['poster_path'],
                         )
                       )
                     );
@@ -43,11 +44,10 @@ class CinemaMovie extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
-                            child: ClipRRect(
-                          child: FadeInImage.memoryNetwork(
-                              placeholder: kTransparentImage,
-                              image: 'https://image.tmdb.org/t/p/w500' +
-                                  cinema[index]['poster_path']),
+                          child: ClipRRect(
+                            child: FadeInImage.memoryNetwork(
+                                placeholder: kTransparentImage,
+                                image: 'https://image.tmdb.org/t/p/w500'+cinema[index]['poster_path']),
                           borderRadius: BorderRadius.circular(10),
                         )),
                         Container(
