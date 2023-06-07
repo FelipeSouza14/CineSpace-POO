@@ -50,7 +50,7 @@ class HomePageState extends State<HomePage> {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text('CineSpace', style: GoogleFonts.breeSerif()),
+          title: Text('CineSpace', style: GoogleFonts.righteous(color: Colors.blue, fontSize: 25)),
           actions: [
             IconButton(
                 onPressed: () {
