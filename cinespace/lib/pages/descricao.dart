@@ -4,10 +4,10 @@ import 'package:transparent_image/transparent_image.dart';
 
 
 class DescriptionMovie extends StatelessWidget {
-  final String name, descricao, votos, bannerurl, date;
+  final String name, descricao, votos, bannerurl, date, poster;
 
   const DescriptionMovie({Key? key, required this.name, required this.descricao, 
-  required this.votos, required this.bannerurl, required this.date});
+  required this.votos, required this.bannerurl, required this.date, required this.poster});
 
   @override
   Widget build(BuildContext context) {
@@ -74,6 +74,23 @@ class DescriptionMovie extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(5),
             child: Text(date!=null?date: 'carregando...', style: GoogleFonts.breeSerif(fontSize: 18)),
+          ),
+          SizedBox(height: 10),
+          Container(
+            padding: EdgeInsets.all(10),
+            child: Row(
+              children: [
+                ClipRRect(
+                  child: FadeInImage.memoryNetwork(
+                    height: 270,
+                    width: 150,
+                    placeholder: kTransparentImage, 
+                    image: poster,),
+                    borderRadius: BorderRadius.circular(10)),
+                  SizedBox(width: 8,),
+                  Flexible(child: Text(descricao!=null?descricao: 'carregando...', style: GoogleFonts.breeSerif(fontSize: 15)))
+              ],
+            ),
           )
         ],
       ),
