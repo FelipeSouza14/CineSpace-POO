@@ -53,6 +53,9 @@ class PesquisaPage extends SearchDelegate<String> {
               child: Text('erro ao pesquisar'),
             );
           }
+          return Center(
+            child: CircularProgressIndicator(),
+          );
         });
   }
 
