@@ -39,7 +39,21 @@ class PesquisaPage extends SearchDelegate<String> {
   @override
   Widget buildSuggestions(BuildContext context) {
     // TODO: implement buildSuggestions
-    return Container();
+    return FutureBuilder<List>(
+        future: sugestoes(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return ListView.builder(
+                itemCount: snapshot.data!.length,
+                itemBuilder: (context, index) {
+                  return ListTile();
+                });
+          } else if (snapshot.hasError) {
+            return Center(
+              child: Text('erro ao pesquisar'),
+            );
+          }
+        });
   }
 
   Future<List> sugestoes() async {
