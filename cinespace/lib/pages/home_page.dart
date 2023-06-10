@@ -1,4 +1,3 @@
-import 'package:cinespace/pages/pesquisa_page.dart';
 import 'package:flutter/material.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -50,40 +49,27 @@ class HomePageState extends State<HomePage> {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text('CineSpace', style: GoogleFonts.righteous(color: Colors.blue, fontSize: 25)),
+          title: Text('CineSpace',
+              style: GoogleFonts.righteous(color: Colors.blue, fontSize: 25)),
           actions: [
-            IconButton(
-                onPressed: () {
-                  showSearch(
-                    context: context,
-                    delegate: PesquisaPage(),
-                  );
-                },
-                icon: Icon(Icons.search_rounded)),
-
             PopupMenuButton<String>(
-              onSelected: (value) {
-                if (value == 'voltar'){
-                  Navigator.of(context).pushReplacementNamed('/');
-
-                }
-              },
-              itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
-                PopupMenuItem<String>(
-                  value: 'voltar',
-                  child: Text('Logout')
-                  )
-                ]
-              )
-            ],
-          ),
+                onSelected: (value) {
+                  if (value == 'voltar') {
+                    Navigator.of(context).pushReplacementNamed('/');
+                  }
+                },
+                itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+                      PopupMenuItem<String>(
+                          value: 'voltar', child: Text('Logout'))
+                    ])
+          ],
+        ),
         body: ListView(
           children: [
             BestSeries(tvbest: bestseries),
             PopularMovie(popular: popularmovies),
             CinemaMovie(cinema: cinemamovies)
-        ],
-      )
-    );
+          ],
+        ));
   }
 }
