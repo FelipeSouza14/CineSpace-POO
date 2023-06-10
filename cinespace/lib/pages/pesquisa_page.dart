@@ -1,4 +1,8 @@
 import 'dart:convert';
+import 'package:transparent_image/transparent_image.dart';
+
+import 'descricao.dart';
+import 'home_page.dart';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -39,35 +43,6 @@ class PesquisaPage extends SearchDelegate<String> {
   @override
   Widget buildSuggestions(BuildContext context) {
     // TODO: implement buildSuggestions
-    return FutureBuilder<List>(
-        future: sugestoes(),
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return ListView.builder(
-                itemCount: snapshot.data!.length,
-                itemBuilder: (context, index) {
-                  return ListTile();
-                });
-          } else if (snapshot.hasError) {
-            return Center(
-              child: Text('erro ao pesquisar'),
-            );
-          }
-          return Center(
-            child: CircularProgressIndicator(),
-          );
-        });
-  }
-
-  Future<List> sugestoes() async {
-    var url = Uri.parse('htts://www.themoviedb.org/movie?search=$query');
-    Map<String, String> headers = {
-      'Authorization': '1d9a3b2956d60bfebc1a8a6420c20bb0',
-    };
-    var response = await http.get(url, headers: headers);
-    if (response.statusCode == 200) {
-      return json.decode(response.body).map((escolha) => escolha).toList();
-    }
-    throw Exception("erro");
+    return Container();
   }
 }
