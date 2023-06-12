@@ -5,7 +5,7 @@ Repositório voltado para a criação de um projeto da matéria de Programação
 [Link do repositório](https://github.com/FelipeSouza14/CineSpace-POO.git)
 
 
-# Para rodar o aplicativo, basta seguir os passos abaixo:
+#  🛠️ Para rodar o projeto, basta seguir os passos abaixo:
 **1.**. Copie o link do repositório.</br>
 
 **2.** Abra o terminal e escolha uma pasta</br>
@@ -22,13 +22,28 @@ Repositório voltado para a criação de um projeto da matéria de Programação
 </br>
 # Imagens do aplicativo:
 </br>
-**Tela de Login
+Tela de Login:
+</br>
 
 <img width="" heigth="" src="/cinespace/assets/imgs/tela inicial.png">
 </br>
-**Tela de cadastro**
+Tela de cadastro:
+</br>
+
 <img width="" heigth="" src="/cinespace/assets/imgs/tela cadastro.png">
 </br>
-**Tela inicial**
+Tela inicial:
+</br>
 <img width="" heigth="" src="/cinespace/assets/imgs/telainicial.png">
 </br>
+
+## Autores:
+
+| [<img src="https://avatars.githubusercontent.com/u/112143084?v=4" width=155><br><sub>Felipe Souza</sub>](https://github.com/FelipeSouza14) |  [<img src="https://avatars.githubusercontent.com/u/87441572?v=4" width=155><br><sub>Thamiris Borges</sub>](https://github.com/Thami03) 
+| :---: | :---: 
+
+## Licença 
+
+The [MIT License]() (MIT)
+
+Copyright :copyright: 2023 - CineSpace
