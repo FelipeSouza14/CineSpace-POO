@@ -1,7 +1,10 @@
-<h1 align="center", color= "blue"> CineSpace </h1>
+<h1 align="center"> CineSpace </h1>
 
-Repositório voltado para a criação de um projeto da matéria de Programação Orientada a Objetos I, o projeto desenvolvido consiste em um aplicativo de filmes, com o uso de uma API.
+
+## Repositório voltado para a criação de um projeto da matéria de Programação Orientada a Objetos I. O projeto desenvolvido consiste em um aplicativo de filmes, com o uso de uma API.
 </br>
+
+
 [Link do repositório](https://github.com/FelipeSouza14/CineSpace-POO.git)
 
 
@@ -20,21 +23,21 @@ Repositório voltado para a criação de um projeto da matéria de Programação
 
 <sub> Se você fez o passo a passo, com certeza deu certo.</sub>	
 </br>
-# Imagens do aplicativo:
+## Imagens do aplicativo:
 </br>
 Tela de Login:
 </br>
 
-<img width="" heigth="" src="/cinespace/assets/imgs/tela inicial.png">
+<img width="1000" heigth="500" src="/cinespace/assets/imgs/tela inicial.png">
 </br>
 Tela de cadastro:
 </br>
 
-<img width="" heigth="" src="/cinespace/assets/imgs/tela cadastro.png">
+<img width="1000" heigth="500" src="/cinespace/assets/imgs/tela cadastro.png">
 </br>
 Tela inicial:
 </br>
-<img width="" heigth="" src="/cinespace/assets/imgs/telainicial.png">
+<img width="1000" heigth="500" src="/cinespace/assets/imgs/telainicial.png">
 </br>
 
 ## Autores:
