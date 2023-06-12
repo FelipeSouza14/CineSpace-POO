@@ -48,17 +48,6 @@ class DescriptionMovie extends StatelessWidget {
                       )
                     ),
                   ),
-                // Positioned(
-                //   left: -2,
-                //   child: ElevatedButton(
-                //       onPressed: () {
-                //         Navigator.pop(context);
-                //       },
-                //       style: ElevatedButton.styleFrom(backgroundColor: Colors.transparent),
-                //       child: Icon(Icons.arrow_back),
-
-                //     )
-                //   ),
                 Positioned(
                   bottom: 10,
                   child: Text('Favorites - '+votos, style: GoogleFonts.breeSerif(fontSize: 25, fontWeight: FontWeight.bold),)
@@ -88,7 +77,7 @@ class DescriptionMovie extends StatelessWidget {
                     image: poster,),
                     borderRadius: BorderRadius.circular(10)),
                   SizedBox(width: 8,),
-                  Flexible(child: Text(descricao!=null?descricao: 'carregando...', style: GoogleFonts.breeSerif(fontSize: 15)))
+                  Flexible(child: Text(descricao!=null?descricao: 'carregando...', style: GoogleFonts.breeSerif(fontSize: 15), textAlign: TextAlign.justify,))
               ],
             ),
           )
