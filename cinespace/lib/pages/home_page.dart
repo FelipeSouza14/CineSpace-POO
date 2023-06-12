@@ -30,8 +30,7 @@ class HomePageState extends State<HomePage> {
   }
 
   void carregarmovies() async {
-    TMDB carregartmdb = TMDB(ApiKeys(apikey, acesstoken),
-        logConfig: ConfigLogger(showLogs: true, showErrorLogs: true));
+    TMDB carregartmdb = TMDB(ApiKeys(apikey, acesstoken));
     Map popular_results = await carregartmdb.v3.trending.getTrending();
     Map bestseries_results = await carregartmdb.v3.tv.getTopRated();
     Map cinema_results = await carregartmdb.v3.movies.getNowPlaying();
